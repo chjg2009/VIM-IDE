@@ -1,3 +1,5 @@
 1.vim8源码获取:
-
+git@github.com:vim/vim.git
+或
+https://github.com/vim/vim.git
 2.python支持
