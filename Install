@@ -18,3 +18,14 @@ sudo make install
 安装完成后可以通过:vim --version查看python3是否以安装完成.
 4.vundle 插件管理插件安装
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vimrc配置文件中增加如下设置:
+set nocompatible               " be iMproved
+filetype off                   " required!       /**  从这行开始，vimrc配置 **/
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
