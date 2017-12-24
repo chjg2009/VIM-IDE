@@ -9,6 +9,9 @@ cd vim/src
 #CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
 CONF_OPT_PYTHON3 = --enable-python3interp               #增加python3支持
 CONF_OPT_PYTHON3 = --enable-python3interp=dynamic
+
+注:通过如下命令清楚原有配置
+make distclean
 3.安装 (src目录下)
 make
 sudo make install
