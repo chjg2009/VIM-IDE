@@ -3,3 +3,13 @@ git@github.com:vim/vim.git
 或
 https://github.com/vim/vim.git
 2.python支持
+cd vim/src
+打开Makefile文件,做如下配置:
+#CONF_OPT_PYTHON = --enable-pythoninterp
+#CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
+CONF_OPT_PYTHON3 = --enable-python3interp               #增加python3支持
+CONF_OPT_PYTHON3 = --enable-python3interp=dynamic
+3.安装 (src目录下)
+make
+sudo make install
+安装完成后可以通过:vim --version查看python3是否以安装完成.
