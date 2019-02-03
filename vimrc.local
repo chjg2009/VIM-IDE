@@ -1,12 +1,12 @@
 set nocompatible               " be iMproved
 filetype off                   " required!       /**  从这行开始，vimrc配置 **/
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 
 " My Bundles here:  /* 插件配置格式 */
 "
@@ -24,6 +24,9 @@ Bundle 'c.vim'
 Bundle 'minibufexpl.vim'
 Bundle 'Rename'
 Bundle 'DoxygenToolKit.vim'
+Bundle 'genutils'
+Bundle 'lookupfile'
+Bundle 'scrooloose/nerdcommenter'
 "Bundle 'OmniCppComplete'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
@@ -32,6 +35,7 @@ Bundle 'rust-lang/rust.vim'
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
+call vundle#end()
 filetype plugin indent on     " required!   /** vimrc文件配置结束 **/
 "                                           /** vundle命令 **/
 " Brief help

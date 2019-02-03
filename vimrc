@@ -116,8 +116,8 @@ set magic               " change the way backslashes are used in search patterns
 set bs=indent,eol,start " Allow backspacing over everything in insert mode
 set nobackup            " no backup~ files.
 
-set tabstop=2           " number of spaces a tab counts for
-set shiftwidth=2        " spaces for autoindents
+set tabstop=4           " number of spaces a tab counts for
+set shiftwidth=4        " spaces for autoindents
 set softtabstop=2
 set shiftround          " makes indenting a multiple of shiftwidth
 set expandtab           " turn a tab into spaces
@@ -554,7 +554,7 @@ nnoremap <leader>a :cs find a <C-R>=expand("<cword>")<CR><CR>
 
 "nnoremap <leader><F12> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
 nnoremap <leader><leader> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
-  \:!cscope -b -i cscope.files -f cscope.out<CR>
+  \:!cscope -Rbq -i cscope.files -f cscope.out<CR>
   \:cs reset<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               easymotion                                "
@@ -621,10 +621,26 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                          DoxGenToolkit config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:myinterCommentBlock = "// "
+"let g:DoxygenToolkit_compactOneLineDoc = "yes"
+"let g:DoxygenToolkit_commentType = "C++"
+" let g:DoxygenToolkit_paramTag_pre="@Param "
+" let g:DoxygenToolkit_returnTag="@Returns   "
+"let g:DoxygenToolkit_versionString ="version 1.0"
+let g:DoxygenToolkit_fileTag = "file     : "
+let g:myDoxygenToolkit_briefTag_pre = "add description "
+let g:myDoxygenToolkit_blockHeader="****************************************************************************"
+let g:myDoxygenToolkit_blockFooter="****************************************************************************"
+let g:myDoxygenToolkit_authorName="      jack.cheng       "
+let g:myDoxygenToolkit_licenseTag="Copyright (c) 2011-2014 HSAE co. Ltd. All rights reserved."   "<-- Does not end with
+
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
-  source ~/.vim/vimrc.local
+  source /etc/vim/vimrc.local
 endif
 
 
